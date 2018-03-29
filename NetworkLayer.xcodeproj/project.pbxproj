@@ -12,6 +12,8 @@
 		6085D0F6206D43BB00E36D9E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6085D0F4206D43BB00E36D9E /* Main.storyboard */; };
 		6085D0F8206D43BB00E36D9E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6085D0F7206D43BB00E36D9E /* Assets.xcassets */; };
 		6085D0FB206D43BB00E36D9E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6085D0F9206D43BB00E36D9E /* LaunchScreen.storyboard */; };
+		6085D10B206D459B00E36D9E /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6085D10A206D459B00E36D9E /* EndPointType.swift */; };
+		6085D10D206D509100E36D9E /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6085D10C206D509100E36D9E /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		6085D0F7206D43BB00E36D9E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6085D0FA206D43BB00E36D9E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6085D0FC206D43BB00E36D9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6085D10A206D459B00E36D9E /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EndPointType.swift; path = NetworkLayer/Networking/Service/EndPointType.swift; sourceTree = SOURCE_ROOT; };
+		6085D10C206D509100E36D9E /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,80 @@
 		6085D0EF206D43BB00E36D9E /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				6085D0F0206D43BB00E36D9E /* AppDelegate.swift */,
-				6085D0F2206D43BB00E36D9E /* ViewController.swift */,
-				6085D0F4206D43BB00E36D9E /* Main.storyboard */,
+				6085D103206D44DF00E36D9E /* Application */,
+				6085D102206D44D600E36D9E /* ViewController */,
+				6085D104206D44F700E36D9E /* Model */,
+				6085D105206D44FF00E36D9E /* Networking */,
 				6085D0F7206D43BB00E36D9E /* Assets.xcassets */,
-				6085D0F9206D43BB00E36D9E /* LaunchScreen.storyboard */,
 				6085D0FC206D43BB00E36D9E /* Info.plist */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		6085D102206D44D600E36D9E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6085D0F2206D43BB00E36D9E /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6085D103206D44DF00E36D9E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6085D0F4206D43BB00E36D9E /* Main.storyboard */,
+				6085D0F9206D43BB00E36D9E /* LaunchScreen.storyboard */,
+				6085D0F0206D43BB00E36D9E /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6085D104206D44F700E36D9E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6085D105206D44FF00E36D9E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				6085D109206D452100E36D9E /* Encoding */,
+				6085D108206D451200E36D9E /* Service */,
+				6085D107206D450E00E36D9E /* Manager */,
+				6085D106206D450700E36D9E /* Endpoint */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		6085D106206D450700E36D9E /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				6085D10A206D459B00E36D9E /* EndPointType.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		6085D107206D450E00E36D9E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6085D108206D451200E36D9E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6085D10C206D509100E36D9E /* HTTPMethod.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		6085D109206D452100E36D9E /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6085D10D206D509100E36D9E /* HTTPMethod.swift in Sources */,
 				6085D0F3206D43BB00E36D9E /* ViewController.swift in Sources */,
 				6085D0F1206D43BB00E36D9E /* AppDelegate.swift in Sources */,
+				6085D10B206D459B00E36D9E /* EndPointType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
